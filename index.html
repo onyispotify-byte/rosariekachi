@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rosarie & Kachi Wedding</title>
+  <!-- Elegant font pairing: Playfair Display for headings, Cormorant Garamond for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom font family for the entire body */
+    body {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    /* Apply Playfair Display to all headings for an elegant touch */
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    /* Custom color definitions */
+    .bg-navy { background-color: #001f3f; }
+    .text-navy { color: #001f3f; }
+    .bg-gold { background-color: #FFD700; }
+    .text-gold { color: #FFD700; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Main Container -->
+  <div class="max-w-4xl mx-auto p-4 md:p-8">
+
+    <!-- Hero Section with a beautiful gold gradient -->
+    <header class="text-center py-16 md:py-24 rounded-2xl shadow-xl overflow-hidden bg-gradient-to-br from-blue-900 to-gray-900 text-white relative">
+      <div class="absolute inset-0 z-0">
+        <!-- Overlay for better text contrast -->
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+      </div>
+      <div class="relative z-10">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-gold">
+          Rosarie & Kachi
+        </h1>
+        <p class="text-xl md:text-2xl font-light mb-6">
+          are getting married!
+        </p>
+        <div class="flex flex-col items-center justify-center">
+          <p class="text-lg md:text-xl font-medium mb-2">
+            Saturday, September 13, 2025
+          </p>
+          <p class="text-md md:text-lg italic text-gray-300">
+            Lagos, Nigeria
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Sections -->
+    <main class="mt-8 space-y-8 md:space-y-12">
+      
+      <!-- Event Details Section -->
+      <section class="bg-white p-6 md:p-10 rounded-2xl shadow-lg border-l-4 border-gold">
+        <h2 class="text-3xl md:text-4xl font-bold text-navy mb-6 text-center">
+          The Details
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 text-center md:text-left">
+          <!-- Ceremony Details Card -->
+          <div class="p-6 bg-gray-50 rounded-xl shadow-inner border-t-2 border-gold">
+            <h3 class="text-2xl font-semibold text-blue-800 mb-2"> Church Ceremony</h3>
+            <p class="text-lg text-gray-700 mb-1">Time: 10:00 AM</p>
+            <p class="text-md text-gray-600 font-medium">Location:</p>
+            <p class="text-md text-gray-600">St. Dominics Catholic Church</p>
+            <p class="text-md text-gray-600">356 Herbert Macaulay Way Yaba Lagos Wedding Avenue</p>
+          </div>
+          <!-- Reception Details Card -->
+          <div class="p-6 bg-gray-50 rounded-xl shadow-inner border-t-2 border-gold">
+            <h3 class="text-2xl font-semibold text-blue-800 mb-2">Reception</h3>
+            <p class="text-lg text-gray-700 mb-1">Time: 1:00 PM</p>
+            <p class="text-md text-gray-600 font-medium">Location:</p>
+            <p class="text-md text-gray-600">The Royal Ballroom</p>
+            <p class="text-md text-gray-600">1 Taylor Drive[Via Edmund Crescent] Jibowu Yaba Lagos </p>
+            <p class="text-sm italic text-gray-500 mt-2">drinks, and dancing to follow!</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RSVP Form Section -->
+      <section id="rsvp" class="bg-white p-6 md:p-10 rounded-2xl shadow-lg border-l-4 border-gold">
+        <h2 class="text-3xl md:text-4xl font-bold text-navy mb-6 text-center">
+          RSVP
+        </h2>
+        <p class="text-center text-lg text-gray-700 mb-8">
+          Kindly RSVP by September 10, 2025.
+        </p>
+
+        <form id="rsvp-form" class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+            <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-blue-600 focus:ring-blue-600">
+          </div>
+          <div>
+            <label for="attending" class="block text-sm font-medium text-gray-700">Will you be attending?</label>
+            <select id="attending" name="attending" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-blue-600 focus:ring-blue-600">
+              <option value="yes">Yes, I will be there!</option>
+              <option value="no">No, unfortunately I can't make it.</option>
+            </select>
+          </div>
+          <div id="guest-count-field" class="hidden">
+            <label for="guests" class="block text-sm font-medium text-gray-700">Number of guests (including yourself)</label>
+            <input type="number" id="guests" name="guests" min="1" value="1" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-blue-600 focus:ring-blue-600">
+          </div>
+          
+          <div class="flex justify-center">
+            <button type="submit" class="w-full md:w-auto px-8 py-3 bg-blue-900 text-gold font-semibold rounded-full shadow-lg hover:bg-blue-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">
+              Submit RSVP
+            </button>
+          </div>
+        </form>
+        <!-- Submission Status Message Box -->
+        <div id="message-box" class="mt-6 p-4 rounded-md hidden"></div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('rsvp-form');
+      const attendingSelect = document.getElementById('attending');
+      const guestCountField = document.getElementById('guest-count-field');
+      const messageBox = document.getElementById('message-box');
+
+      // Show/hide guest count field based on attendance
+      attendingSelect.addEventListener('change', (e) => {
+        if (e.target.value === 'yes') {
+          guestCountField.classList.remove('hidden');
+        } else {
+          guestCountField.classList.add('hidden');
+        }
+      });
+
+      // Handle form submission
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // IMPORTANT: Replace this URL with your deployed Google Apps Script URL
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxtitw-ajY1HRyen6m5830KztglZn5XsVYQkwTVWTLj4JY0ZI0oh3woaB-GY8fTrHc3/exec';
+        
+        // Show submitting message
+        showMessage('Submitting...', 'bg-blue-100 text-blue-700');
+        
+        try {
+            const formData = new FormData(form);
+            const response = await fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors', // Required for Google Apps Script as a web app
+                body: formData
+            });
+
+            // The 'no-cors' mode means we can't read the response. We assume success.
+            showMessage('Thank you! Your RSVP has been submitted. We can\'t wait to see you!', 'bg-green-100 text-green-700');
+            
+            // Reset the form after a short delay
+            setTimeout(() => {
+                form.reset();
+                guestCountField.classList.add('hidden');
+                hideMessage();
+            }, 3000);
+
+        } catch (error) {
+            console.error('Submission Error:', error);
+            showMessage('Oops! There was an error submitting your RSVP. Please try again.', 'bg-red-100 text-red-700');
+        }
+      });
+
+      // Helper function to display messages
+      function showMessage(message, classes) {
+        // Clear all previous classes before adding new ones
+        messageBox.className = '';
+        messageBox.classList.add('mt-6', 'p-4', 'rounded-md');
+        
+        // Split the classes string and add them individually
+        classes.split(' ').forEach(cls => messageBox.classList.add(cls));
+
+        messageBox.textContent = message;
+        messageBox.classList.remove('hidden');
+      }
+
+      // Helper function to hide the message box
+      function hideMessage() {
+        messageBox.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+</html>
